@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Moriah Prayer House - A place of worship and fellowship in Chittoor">
+    <title>Moriah Prayer House - Chittoor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="images/logo.png">
+</head>
+<body>
+
+<div class="urgent-alert" id="top-alert">
+    <span>📢 <strong>Special Announcement:</strong> Join us for a District Special Fasting Prayer on February 14 this Saturday 9:30 AM at Moriah Prayer House!</span>
+    <button onclick="document.getElementById('top-alert').style.display='none'">×</button>
+</div>
+
+<header>
+    <div class="header-content">
+        <div class="logo-container">
+            <img src="images/logo.png" alt="Moriah Prayer House Logo" class="church-logo">
+            <div class="header-text">
+                <h1>Moriah Prayer House</h1>
+                <p>Hebron Fellowship | Chittoor</p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#prayer-request">Prayer Request</a></li>
+        <li><a href="#meetings">Weekly Meetings</a></li>
+        <li><a href="#announcements">Announcements</a></li>
+        <li><a href="#media">Media</a></li>
+    </ul>
+</nav>
+
+<div class="container">
+    <aside class="sidebar">
+        <h3>📅 Special Meetings</h3>
+        <div id="special-meetings-container">
+            <div class="special-meeting">
+                <h4>District Fasting Prayer</h4>
+                <p><strong>📅 February 14, 2026</strong></p>
+                <p><strong>⏰ 9:30 AM </strong></p>
+                <p>Join us for district fasting prayer!</p>
+            </div>
+        </div>
+
+        <div class="bible-verse" id="daily-verse">
+            <h3>📖 Daily Verse</h3>
+            <p id="verse-text">Loading verse...</p>
+            <p class="reference" id="verse-reference"></p>
+            <p class="verse-countdown" id="verse-countdown"></p>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <section id="home" class="content-section">
+            <h2>🏠 Welcome to Moriah Prayer House</h2>
+            <p>Prayerfully started in 1958, By Bro. Bakth Singh and Co-Workers.</p>
+        </section>
+
+        <section id="prayer-request" class="content-section">
+            <h2>🙏 Prayer Request</h2>
+            <div class="success-message" id="success-message">
+                Thank you! Your prayer request has been submitted. Our prayer team will be praying for you.
+            </div>
+            <p style="margin-bottom: 1.5rem;">We believe in the power of prayer. Share your prayer requests with us, and we will uphold you in our Prayers.</p>
+
+            <form class="prayer-form" id="prayer-form" action="https://formspree.io/f/mvzbgjkp" method="POST">
+                <input type="hidden" name="_next" value="https://www.moriahprayerhouse.info/#prayer-request">
+
+                <input type="text" name="name" placeholder="Your Name *" required>
+                <input type="email" name="email" placeholder="Your Email (Optional)">
+                <input type="tel" name="phone" placeholder="Your Phone Number (Optional)">
+                <textarea name="prayer_request" placeholder="Your Prayer Request *" required></textarea>
+                <button type="submit" class="submit-btn">Submit Prayer Request</button>
+            </form>
+        </section>
+
+        <section id="meetings" class="content-section">
+            <h2>📅 Weekly Meetings</h2>
+            <div class="meeting-list">
+                <div class="meeting-item" id="meeting-0">
+                    <h3>Sunday Worship Service</h3>
+                    <p class="time">⏰ 9:30 AM - 01:30 PM</p>
+                    <div class="status-indicator"></div>
+                </div>
+                <div class="meeting-item" id="meeting-2">
+                    <h3>Church Prayer Meeting</h3>
+                    <p class="time">⏰ 6:30 PM - 8:00 PM (Every Tuesday)</p>
+                    <div class="status-indicator"></div>
+                </div>
+                <div class="meeting-item" id="meeting-3">
+                    <h3>Sister's Meeting</h3>
+                    <p class="time">⏰ 06:30 PM - 08:00 PM (Every Wednesday)</p>
+                    <div class="status-indicator"></div>
+                </div>
+                <div class="meeting-item" id="meeting-4">
+                    <h3>Bible Study</h3>
+                    <p class="time">⏰ 06:30 PM - 08:00 PM (Every Thursday)</p>
+                    <div class="status-indicator"></div>
+                </div>
+                <div class="meeting-item" id="meeting-6">
+                    <h3>Fasting Prayer</h3>
+                    <p class="time">⏰ 9:30 AM - 02:00 PM (Every Saturday)</p>
+                    <div class="status-indicator"></div>
+                </div>
+            </div>
+            <div class="meeting-item" style="background: #fff3cd; border-left: 5px solid #ffc107; margin-top: 1rem;">
+                <p><strong>Special Note:</strong> Every 2nd Saturday of every month District Fasting Prayer will be held at Moriah Church branches.</p>
+            </div>
+        </section>
+
+        <section id="announcements" class="content-section">
+            <h2>📢 Announcements</h2>
+            <div class="announcement-item">
+                <h3 style="display: flex; justify-content: space-between; align-items: center;">
+                    District Fasting Prayer
+                    <span class="badge-new">NEW</span>
+                </h3>
+                <p class="date">📅 Feb 14, 2026</p>
+                <p>Join us for Special District Fasting Prayer at Moriah Prayer House.</p>
+            </div>
+        </section>
+
+        <section id="gallery" class="content-section">
+            <h2>📸 Our Church in Photos</h2>
+            <div class="photo-grid">
+                <div class="photo-item"><img src="images/entry_view.jpg" alt="Entry View"></div>
+                <div class="photo-item"><img src="images/pulpit.jpg" alt="Pulpit"></div>
+                <div class="photo-item"><img src="images/pulpit_view.jpg" alt="Pulpit View"></div>
+            </div>
+        </section>
+
+        <section id="media" class="content-section">
+            <h2>🎥 Find Us Online</h2>
+            <div class="media-grid">
+                <div class="media-card">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3882.256247071626!2d79.0881!3d13.2268!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTPCsDEzJzM2LjUiTiA3OcKwMDUnMTcuMiJF!5e0!3m2!1sen!2sin!4v1640000000000" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    <div class="card-content">
+                        <h3>📍 Visit Us</h3>
+                        <p>Moriah Prayer House, Greamspet, Chittoor</p>
+                        <a href="https://maps.app.goo.gl/3" target="_blank" style="color: #1e3c72; font-weight: 600;">Open in Google Maps →</a>
+                    </div>
+                </div>
+                <div class="media-card">
+                    <img src="images/channel.png" alt="YouTube Channel" style="width: 100%; height: 250px; object-fit: cover;">
+                    <div class="card-content">
+                        <h3>📺 YouTube Channel</h3>
+                        <p>Watch our latest sermons and worship sessions</p>
+                        <a href="https://www.youtube.com/@MoriahPrayerHouseChittoor" target="_blank" style="color: #1e3c72; font-weight: 600;">Visit Channel →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</div>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>About Us</h3>
+            <p>Following Acts 2:42, Moriah Prayer House is a church devoted to the Apostles’ teaching and fellowship, to the breaking of bread and to prayer, building lives rooted in Christ and united in love.</p>
+        </div>
+        <div class="footer-section">
+            <h3>Connect With Us</h3>
+            <ul class="contact-info">
+                <li>📧 moriah.chittoor@gmail.com</li>
+                <li>📍 Chittoor, Andhra Pradesh</li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2026 Moriah Prayer House, Chittoor. Built with faith and Prayers ❤️</p>
+    </div>
+</footer>
+
+<script>
+    // =========================================================
+    // 30 Daily Verses + Countdown + Auto-change at 12:00 AM
+    // =========================================================
+    const bibleVerses = [
+      { text: "For God so loved the world that he gave his one and only Son.", reference: "John 3:16" },
+      { text: "I can do all this through him who gives me strength.", reference: "Philippians 4:13" },
+      { text: "Trust in the LORD with all your heart and lean not on your own understanding.", reference: "Proverbs 3:5" },
+      { text: "In all your ways acknowledge him, and he will make your paths straight.", reference: "Proverbs 3:6" },
+      { text: "The LORD is my shepherd, I lack nothing.", reference: "Psalm 23:1" },
+      { text: "Be still, and know that I am God.", reference: "Psalm 46:10" },
+      { text: "The LORD is my light and my salvation—whom shall I fear?", reference: "Psalm 27:1" },
+      { text: "Cast all your anxiety on him because he cares for you.", reference: "1 Peter 5:7" },
+      { text: "Come to me, all you who are weary and burdened, and I will give you rest.", reference: "Matthew 11:28" },
+      { text: "Seek first his kingdom and his righteousness, and all these things will be given to you as well.", reference: "Matthew 6:33" },
+      { text: "Do not be afraid, for I am with you; do not be dismayed, for I am your God.", reference: "Isaiah 41:10" },
+      { text: "When you pass through the waters, I will be with you.", reference: "Isaiah 43:2" },
+      { text: "For I know the plans I have for you, declares the LORD… plans to give you hope and a future.", reference: "Jeremiah 29:11" },
+      { text: "We love because he first loved us.", reference: "1 John 4:19" },
+      { text: "The name of the LORD is a fortified tower; the righteous run to it and are safe.", reference: "Proverbs 18:10" },
+      { text: "The LORD is close to the brokenhearted and saves those who are crushed in spirit.", reference: "Psalm 34:18" },
+      { text: "Taste and see that the LORD is good; blessed is the one who takes refuge in him.", reference: "Psalm 34:8" },
+      { text: "Your word is a lamp for my feet, a light on my path.", reference: "Psalm 119:105" },
+      { text: "The joy of the LORD is your strength.", reference: "Nehemiah 8:10" },
+      { text: "Let everything that has breath praise the LORD.", reference: "Psalm 150:6" },
+      { text: "If God is for us, who can be against us?", reference: "Romans 8:31" },
+      { text: "And we know that in all things God works for the good of those who love him.", reference: "Romans 8:28" },
+      { text: "Be strong and courageous… for the LORD your God will be with you wherever you go.", reference: "Joshua 1:9" },
+      { text: "The LORD will fight for you; you need only to be still.", reference: "Exodus 14:14" },
+      { text: "The LORD is good, a refuge in times of trouble.", reference: "Nahum 1:7" },
+      { text: "Create in me a clean heart, O God, and renew a steadfast spirit within me.", reference: "Psalm 51:10" },
+      { text: "This is the day the LORD has made; let us rejoice and be glad in it.", reference: "Psalm 118:24" },
+      { text: "But those who hope in the LORD will renew their strength.", reference: "Isaiah 40:31" },
+      { text: "My grace is sufficient for you, for my power is made perfect in weakness.", reference: "2 Corinthians 12:9" },
+      { text: "Peace I leave with you; my peace I give you.", reference: "John 14:27" }
+    ];
+
+    function getDailyVerseIndex(dateObj) {
+      return (dateObj.getDate() - 1) % bibleVerses.length;
+    }
+
+    function displayDailyVerse() {
+      const verseTextEl = document.getElementById("verse-text");
+      const verseRefEl = document.getElementById("verse-reference");
+      if (!verseTextEl || !verseRefEl) return;
+      const now = new Date();
+      const verse = bibleVerses[getDailyVerseIndex(now)];
+      verseTextEl.textContent = verse.text;
+      verseRefEl.textContent = "- " + verse.reference;
+    }
+
+    function pad2(n){ return String(n).padStart(2, "0"); }
+
+    function getNextMidnight() {
+      const now = new Date();
+      const next = new Date(now);
+      next.setHours(24, 0, 0, 0);
+      return next;
+    }
+
+    function updateCountdown() {
+      const el = document.getElementById("verse-countdown");
+      if (!el) return;
+      const now = new Date();
+      const diff = getNextMidnight() - now;
+      const total = Math.max(0, Math.floor(diff / 1000));
+      const h = Math.floor(total / 3600);
+      const m = Math.floor((total % 3600) / 60);
+      const s = total % 60;
+      el.textContent = `Next verse in: ${pad2(h)}:${pad2(m)}:${pad2(s)}`;
+    }
+
+    // =========================================================
+    // LIVE MEETING LOGIC
+    // =========================================================
+    const schedule = [
+        { day: 0, start: "09:30", end: "13:30", id: "meeting-0" }, // Sunday
+        { day: 2, start: "18:30", end: "20:00", id: "meeting-2" }, // Tuesday
+        { day: 3, start: "18:30", end: "20:00", id: "meeting-3" }, // Wednesday
+        { day: 4, start: "18:30", end: "20:00", id: "meeting-4" }, // Thursday
+        { day: 6, start: "09:30", end: "14:00", id: "meeting-6" }  // Saturday
+    ];
+
+    function checkLiveMeetings() {
+        const now = new Date();
+        const currentDay = now.getDay();
+        const currentTime = now.getHours() * 60 + now.getMinutes();
+
+        schedule.forEach(meeting => {
+            const element = document.getElementById(meeting.id);
+            if(!element) return;
+            const indicator = element.querySelector('.status-indicator');
+
+            const [sHours, sMins] = meeting.start.split(':').map(Number);
+            const [eHours, eMins] = meeting.end.split(':').map(Number);
+            const startTime = sHours * 60 + sMins;
+            const endTime = eHours * 60 + eMins;
+
+            if (currentDay === meeting.day && currentTime >= startTime && currentTime <= endTime) {
+                element.classList.add('meeting-active');
+                indicator.innerHTML = '<span class="live-badge" style="background:#e74c3c; color:white; padding:2px 10px; border-radius:20px; font-size:0.75rem; animation: blink 1.5s infinite;">🔴 LIVE NOW</span>';
+            } else {
+                element.classList.remove('meeting-active');
+                indicator.innerHTML = '';
+            }
+        });
+    }
+
+    function handleSuccessMessage(){
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.has("success")) {
+          const msg = document.getElementById("success-message");
+          if (msg) {
+              msg.classList.add("show");
+              setTimeout(() => msg.classList.remove("show"), 6000);
+          }
+      }
+    }
+
+    window.addEventListener("DOMContentLoaded", () => {
+      displayDailyVerse();
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
+      setInterval(checkLiveMeetings, 60000);
+      checkLiveMeetings();
+      handleSuccessMessage();
+    });
+</script>
+
+<style>
+    /* Essential additions for Live badges and Success messages */
+    .meeting-active {
+        border-left: 5px solid #2ecc71 !important;
+        background: #f0fff4 !important;
+        transform: translateY(-5px);
+        transition: all 0.3s ease;
+    }
+    @keyframes blink { 0% { opacity: 1; } 50% { opacity: 0.5; } 100% { opacity: 1; } }
+    .success-message { display: none; background: #d4edda; color: #155724; padding: 15px; margin-bottom: 20px; border-radius: 4px; }
+    .success-message.show { display: block; }
+</style>
+
+</body>
+</html>
